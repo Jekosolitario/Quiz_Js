@@ -10,7 +10,7 @@
     /* LINK E STATI INTERATTIVI */
     --link: #0055ff;
     --hover: #003ecc;
-    --active: #ff5500;
+    --active: #ff5500ea;
 
     /* STILI TESTI E BORDI */
     --title: #222222;
@@ -152,7 +152,7 @@ main#corpoQuiz>div#relativ>section#quiz {
 main#corpoQuiz>div#relativ>section#quiz>h2 {
     text-align: center;
 
-    color: var(--bg_2);
+    color: var(--active);
 
     font-family: "Amarante", serif;
     font-weight: bold;

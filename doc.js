@@ -51,9 +51,227 @@ const domandeAnimali = [
   }
 ];
 
+const domandeCinema = [
+  {
+    domanda: "Chi ha diretto il film 'Titanic'?",
+    risposte: ["James Cameron", "Steven Spielberg", "Christopher Nolan", "Martin Scorsese"],
+    corretta: "James Cameron"
+  },
+  {
+    domanda: "Chi interpreta il personaggio di Jack Sparrow in 'Pirati dei Caraibi'?",
+    risposte: ["Johnny Depp", "Brad Pitt", "Leonardo DiCaprio", "Tom Hanks"],
+    corretta: "Johnny Depp"
+  },
+  {
+    domanda: "Quale film ha vinto l'Oscar come miglior film nel 2020?",
+    risposte: ["Parasite", "1917", "Joker", "C'era una volta a... Hollywood"],
+    corretta: "Parasite"
+  },
+  {
+    domanda: "Qual è il vero nome dell’attore che interpreta Harry Potter?",
+    risposte: ["Daniel Radcliffe", "Rupert Grint", "Elijah Wood", "Tom Holland"],
+    corretta: "Daniel Radcliffe"
+  },
+  {
+    domanda: "In quale film troviamo la frase 'Che la forza sia con te'?",
+    risposte: ["Star Wars", "Matrix", "Star Trek", "Avatar"],
+    corretta: "Star Wars"
+  },
+  {
+    domanda: "Qual è il nome del regista italiano di 'La vita è bella'?",
+    risposte: ["Roberto Benigni", "Paolo Sorrentino", "Gabriele Muccino", "Matteo Garrone"],
+    corretta: "Roberto Benigni"
+  },
+  {
+    domanda: "Chi ha composto la colonna sonora de 'Il Re Leone' (1994)?",
+    risposte: ["Hans Zimmer", "John Williams", "Ennio Morricone", "Alan Silvestri"],
+    corretta: "Hans Zimmer"
+  },
+  {
+    domanda: "Quale film Disney ha come protagonista una principessa chiamata Moana?",
+    risposte: ["Oceania", "Frozen", "Raya e l'ultimo drago", "Rapunzel"],
+    corretta: "Oceania"
+  },
+  {
+    domanda: "Chi ha interpretato il Joker in 'Il cavaliere oscuro' del 2008?",
+    risposte: ["Heath Ledger", "Joaquin Phoenix", "Jared Leto", "Christian Bale"],
+    corretta: "Heath Ledger"
+  },
+  {
+    domanda: "In che anno è uscito il primo film della saga di 'Harry Potter'?",
+    risposte: ["2001", "1999", "2003", "2005"],
+    corretta: "2001"
+  }
+];
+
+const domandeSport = [
+  {
+    domanda: "Quanti minuti dura una partita di calcio regolamentare?",
+    risposte: ["90 minuti", "80 minuti", "60 minuti", "100 minuti"],
+    corretta: "90 minuti"
+  },
+  {
+    domanda: "In quale sport si usa la racchetta e la pallina ma non si gioca su un campo verde?",
+    risposte: ["Tennis da tavolo", "Baseball", "Tennis su prato", "Pallamano"],
+    corretta: "Tennis da tavolo"
+  },
+  {
+    domanda: "Chi ha vinto più titoli di Formula 1 nella storia?",
+    risposte: ["Lewis Hamilton", "Michael Schumacher", "Ayrton Senna", "Sebastian Vettel"],
+    corretta: "Lewis Hamilton"
+  },
+  {
+    domanda: "In quale città si sono svolte le Olimpiadi del 2021?",
+    risposte: ["Tokyo", "Pechino", "Rio de Janeiro", "Parigi"],
+    corretta: "Tokyo"
+  },
+  {
+    domanda: "Quanti anelli ci sono nel simbolo delle Olimpiadi?",
+    risposte: ["Cinque", "Sei", "Quattro", "Sette"],
+    corretta: "Cinque"
+  },
+  {
+    domanda: "Qual è lo sport nazionale del Giappone?",
+    risposte: ["Sumo", "Karate", "Judo", "Baseball"],
+    corretta: "Sumo"
+  },
+  {
+    domanda: "In che sport si eseguono 'slam dunk'?",
+    risposte: ["Basket", "Rugby", "Pallavolo", "Calcio"],
+    corretta: "Basket"
+  },
+  {
+    domanda: "Chi è conosciuto come 'il re del calcio'?",
+    risposte: ["Pelé", "Maradona", "Messi", "Cristiano Ronaldo"],
+    corretta: "Pelé"
+  },
+  {
+    domanda: "Come si chiama il campo da gioco nel baseball?",
+    risposte: ["Diamante", "Parallelogramma", "Anello", "Rettangolo"],
+    corretta: "Diamante"
+  },
+  {
+    domanda: "Quanti giocatori ci sono in campo in una squadra di pallavolo?",
+    risposte: ["6", "5", "7", "11"],
+    corretta: "6"
+  }
+];
+
+const domandeGeografia = [
+  {
+    domanda: "Qual è il continente con il maggior numero di stati?",
+    risposte: ["Africa", "Asia", "Europa", "America"],
+    corretta: "Africa"
+  },
+  {
+    domanda: "Qual è il fiume più lungo del mondo?",
+    risposte: ["Nilo", "Amazzoni", "Yangtze", "Mississippi"],
+    corretta: "Amazzoni"
+  },
+  {
+    domanda: "In quale paese si trova il Monte Fuji?",
+    risposte: ["Giappone", "Cina", "Nepal", "Corea del Sud"],
+    corretta: "Giappone"
+  },
+  {
+    domanda: "Qual è la capitale del Canada?",
+    risposte: ["Ottawa", "Toronto", "Vancouver", "Montreal"],
+    corretta: "Ottawa"
+  },
+  {
+    domanda: "Quante regioni ha l'Italia?",
+    risposte: ["20", "18", "22", "21"],
+    corretta: "20"
+  },
+  {
+    domanda: "Qual è l’oceano più grande?",
+    risposte: ["Oceano Pacifico", "Oceano Atlantico", "Oceano Indiano", "Oceano Artico"],
+    corretta: "Oceano Pacifico"
+  },
+  {
+    domanda: "Qual è il deserto più esteso del mondo?",
+    risposte: ["Antartide", "Sahara", "Gobi", "Kalahari"],
+    corretta: "Antartide"
+  },
+  {
+    domanda: "In quale nazione si trovano le cascate del Niagara?",
+    risposte: ["Stati Uniti e Canada", "Solo Canada", "Solo Stati Uniti", "Messico"],
+    corretta: "Stati Uniti e Canada"
+  },
+  {
+    domanda: "Quale isola è anche uno stato?",
+    risposte: ["Islanda", "Groenlandia", "Madagascar", "Cipro"],
+    corretta: "Islanda"
+  },
+  {
+    domanda: "Qual è la capitale dell’India?",
+    risposte: ["Nuova Delhi", "Mumbai", "Calcutta", "Hyderabad"],
+    corretta: "Nuova Delhi"
+  }
+];
+
+const domandeStoria = [
+  {
+    domanda: "In che anno è iniziata la Seconda Guerra Mondiale?",
+    risposte: ["1939", "1945", "1914", "1929"],
+    corretta: "1939"
+  },
+  {
+    domanda: "Chi era Giulio Cesare?",
+    risposte: ["Un generale romano", "Un re egizio", "Un imperatore cinese", "Un filosofo greco"],
+    corretta: "Un generale romano"
+  },
+  {
+    domanda: "Quando è stata scoperta l’America da Cristoforo Colombo?",
+    risposte: ["1492", "1500", "1478", "1602"],
+    corretta: "1492"
+  },
+  {
+    domanda: "Chi era il leader della Germania nazista?",
+    risposte: ["Adolf Hitler", "Benito Mussolini", "Winston Churchill", "Joseph Stalin"],
+    corretta: "Adolf Hitler"
+  },
+  {
+    domanda: "Quale civiltà ha costruito le piramidi di Giza?",
+    risposte: ["Egizi", "Maya", "Inca", "Romani"],
+    corretta: "Egizi"
+  },
+  {
+    domanda: "Chi ha dipinto l’Ultima Cena?",
+    risposte: ["Leonardo da Vinci", "Michelangelo", "Raffaello", "Caravaggio"],
+    corretta: "Leonardo da Vinci"
+  },
+  {
+    domanda: "In quale città è nato Napoleone Bonaparte?",
+    risposte: ["Ajaccio", "Parigi", "Lione", "Marsiglia"],
+    corretta: "Ajaccio"
+  },
+  {
+    domanda: "Quale evento ha segnato la fine del Medioevo?",
+    risposte: ["Scoperta dell’America", "Caduta dell’Impero Romano", "Rivoluzione Francese", "Peste Nera"],
+    corretta: "Scoperta dell’America"
+  },
+  {
+    domanda: "Chi era il presidente degli Stati Uniti durante la Guerra Civile?",
+    risposte: ["Abraham Lincoln", "George Washington", "Franklin D. Roosevelt", "John Adams"],
+    corretta: "Abraham Lincoln"
+  },
+  {
+    domanda: "In che anno è caduto il Muro di Berlino?",
+    risposte: ["1989", "1991", "1980", "1975"],
+    corretta: "1989"
+  }
+];
+
+
 
 /* Selezione degli elementi */
 const btnAnimali = document.querySelector('.b_category.animal');
+const btnCinema = document.querySelector('.b_category.cinema');
+const btnSport = document.querySelector('.b_category.sport');
+const btnGeograf = document.querySelector('.b_category.geography');
+const btnStoria = document.querySelector('.b_category.story');
+
 const h2Domanda = document.querySelector('#quiz > h2');
 const bottoniRisposta = document.querySelectorAll('#risposte > button.solution');
 
@@ -61,41 +279,81 @@ const bottoniRisposta = document.querySelectorAll('#risposte > button.solution')
 
 /* Funzione per generare quiz casuale */
 function mostraQuiz(categoria) {
-    let listaDomande = [];
+  let listaDomande = [];
 
-    if (categoria === 'animali') {
-        listaDomande = domandeAnimali;
-    }
+  if (categoria === 'animali') {
+    listaDomande = domandeAnimali;
+  } else if (categoria === 'cinema') {
+    listaDomande = domandeCinema;
+  } else if (categoria === 'sport') {
+    listaDomande = domandeSport;
+  } else if (categoria === "geografia") {
+    listaDomande = domandeGeografia;
+  } else if (categoria === "storia") {
+    listaDomande = domandeStoria
+  }
 
-    const indice = Math.floor(Math.random() * listaDomande.length);
-    const domandaCorrente = listaDomande[indice];
+  const indice = Math.floor(Math.random() * listaDomande.length);
+  const domandaCorrente = listaDomande[indice];
 
-    // Aggiorna testo domanda
-    h2Domanda.textContent = domandaCorrente.domanda;
+  // Aggiorna testo domanda
+  h2Domanda.textContent = domandaCorrente.domanda;
 
-    // Mescola risposte
-    const risposteMescolate = [...domandaCorrente.risposte].sort(() => Math.random() - 0.5);
+  // Mescola risposte
+  const risposteMescolate = [...domandaCorrente.risposte].sort(() => Math.random() - 0.5);
 
-    // Assegna testo ai bottoni
-    bottoniRisposta.forEach((btn, index) => {
-        btn.textContent = risposteMescolate[index];
-        btn.dataset.corretta = risposteMescolate[index] === domandaCorrente.corretta; // true/false
-        btn.classList.remove('corretta', 'sbagliata'); // reset classi visive
-    });
+  // Assegna testo ai bottoni
+  bottoniRisposta.forEach((btn, index) => {
+    btn.textContent = risposteMescolate[index];
+    btn.dataset.corretta = risposteMescolate[index] === domandaCorrente.corretta; // true/false
+    btn.classList.remove('corretta', 'sbagliata'); // reset classi visive
+  });
 }
 
 /* Click su "Animali" */
 btnAnimali.addEventListener("click", () => {
-    mostraQuiz('animali');
+  categoriaCorrente = 'animali';
+  mostraQuiz(categoriaCorrente);
 });
 
+
 /* Click su una risposta */
-bottoniRisposta.forEach(btn => {
-    btn.addEventListener("click", () => {
-        if (btn.dataset.corretta === "true") {
-            btn.classList.add("corretta");
-        } else {
-            btn.classList.add("sbagliata");
-        }
-    });
+let categoriaCorrente = null;
+
+
+/* Click su "Cinema" */
+btnCinema.addEventListener("click", () => {
+  categoriaCorrente = 'cinema';
+  mostraQuiz(categoriaCorrente);
 });
+/* Click su "Sport" */
+btnSport.addEventListener("click", () => {
+  categoriaCorrente = 'sport';
+  mostraQuiz(categoriaCorrente);
+});
+/* Click su "Geografia" */
+btnGeograf.addEventListener("click", () => {
+  categoriaCorrente = 'geografia';
+  mostraQuiz(categoriaCorrente);
+});
+/* Click su "Storia" */
+btnStoria.addEventListener("click", () => {
+  categoriaCorrente = 'storia';
+  mostraQuiz(categoriaCorrente);
+});
+
+bottoniRisposta.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const corretta = btn.dataset.corretta === "true";
+    btn.classList.add(corretta ? "corretta" : "sbagliata");
+
+    // Dopo 800 ms, passa alla prossima domanda
+    setTimeout(() => {
+      // Rimuovi classi visive
+      bottoniRisposta.forEach(b => b.classList.remove("corretta", "sbagliata"));
+      // Carica nuova domanda mantenendo la categoria corrente
+      mostraQuiz(categoriaCorrente);
+    }, 800);
+  });
+});
+

@@ -1,0 +1,47 @@
+:root {
+    /* font base a 10 px per lavorare più facilmente con le unità rem/em */
+    font-size: 62.5%;
+
+    /* variabili per gestire i colori e i bordi */
+    --bg: #11146d80;
+    --bg_2: #f4f4f9eb;
+    --color: #1c1c1e;
+
+    /* LINK E STATI INTERATTIVI */
+    --link: #0055ff;
+    --hover: #003ecc;
+    --active: #ff5500ea;
+
+    /* STILI TESTI E BORDI */
+    --title: #222222;
+    --border: 2px solid #cccccc;
+    --shadow: 1px 3px 2px rgb(0 0 0);
+}
+
+/* per viewport sopra i 425px */
+@media (min-width: 425px) {
+
+    /* hover sui tasti categorie */
+    header#testaPage>div#categorie>button.b_category:hover {
+        background-color: var(--title);
+        color: var(--bg_2);
+    }
+
+    /* stato active sui tasti */
+    header#testaPage>div#categorie>button.b_category:active {
+        border-color: var(--active);
+        color: var(--active);
+    }
+
+    /* hover pulsanti risposte */
+    main#corpoQuiz>div#relativ>section#quiz>div#risposte>button.solution:hover {
+        opacity: 0.8;
+    }
+}
+
+/* per viewport superiori a 768px */
+@media (min-width: 768px) {
+    main#corpoQuiz>div#relativ {
+        width: 60%;
+    }
+}

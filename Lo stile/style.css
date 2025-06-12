@@ -83,7 +83,7 @@ header>div#categorie {
 }
 
 /* pulsanti categorie */
-header>div#categorie>button {
+header#testaPage>div#categorie>button.b_category {
     padding: 0.2em;
     border-radius: 12px;
 
@@ -113,7 +113,7 @@ main#corpoQuiz {
 
     /* immagine sfondo */
     background-color: var(--title);
-    background-image: url(Immagini/image.webp);
+    background-image: url(/Immagini/image.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -136,8 +136,6 @@ main#corpoQuiz>h2 {
 
 /* contenitore sezioni */
 main#corpoQuiz>div#relativ {
-    position: relative;
-
     width: 100%;
     height: 50vh;
 }
@@ -169,6 +167,8 @@ main#corpoQuiz>div#relativ>section#quiz>div#risposte {
     justify-content: center;
 
     gap: 0.5em;
+
+    padding: 0.5em;
 }
 
 /* pulsanti risposte */
@@ -201,4 +201,6 @@ footer#piePag {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    padding: 0.2em;
 }

@@ -263,9 +263,7 @@ const domandeStoria = [
   }
 ];
 
-
-
-/* Selezione degli elementi */
+/* selezione elementi */
 const btnAnimali = document.querySelector('.b_category.animal');
 const btnCinema = document.querySelector('.b_category.cinema');
 const btnSport = document.querySelector('.b_category.sport');
@@ -275,85 +273,95 @@ const btnStoria = document.querySelector('.b_category.story');
 const h2Domanda = document.querySelector('#quiz > h2');
 const bottoniRisposta = document.querySelectorAll('#risposte > button.solution');
 
+/* Variabile globale per tenere traccia della categoria corrente */
+let categoriaCorrente = null;
 
 
-/* Funzione per generare quiz casuale */
+/* === FUNZIONE PRINCIPALE: mostra una domanda casuale in base alla categoria === */
 function mostraQuiz(categoria) {
-  let listaDomande = [];
+  let listaDomande;
 
-  if (categoria === 'animali') {
-    listaDomande = domandeAnimali;
-  } else if (categoria === 'cinema') {
-    listaDomande = domandeCinema;
-  } else if (categoria === 'sport') {
-    listaDomande = domandeSport;
-  } else if (categoria === "geografia") {
-    listaDomande = domandeGeografia;
-  } else if (categoria === "storia") {
-    listaDomande = domandeStoria
+  // Seleziona l'array corretto in base alla categoria
+  switch (categoria) {
+    case 'animali':
+      listaDomande = domandeAnimali;
+      break;
+    case 'cinema':
+      listaDomande = domandeCinema;
+      break;
+    case 'sport':
+      listaDomande = domandeSport;
+      break;
+    case 'geografia':
+      listaDomande = domandeGeografia;
+      break;
+    case 'storia':
+      listaDomande = domandeStoria;
+      break;
+    default:
+      console.warn(`Categoria "${categoria}" non valida`);
+      return;
   }
 
+  // Estrai una domanda casuale dall’array
   const indice = Math.floor(Math.random() * listaDomande.length);
   const domandaCorrente = listaDomande[indice];
 
-  // Aggiorna testo domanda
+  // Mostra il testo della domanda
   h2Domanda.textContent = domandaCorrente.domanda;
 
-  // Mescola risposte
+  // Mescola l’ordine delle risposte
   const risposteMescolate = [...domandaCorrente.risposte].sort(() => Math.random() - 0.5);
 
-  // Assegna testo ai bottoni
+  // Aggiorna i bottoni con le risposte e resetta le classi precedenti
   bottoniRisposta.forEach((btn, index) => {
     btn.textContent = risposteMescolate[index];
-    btn.dataset.corretta = risposteMescolate[index] === domandaCorrente.corretta; // true/false
-    btn.classList.remove('corretta', 'sbagliata'); // reset classi visive
+    btn.dataset.corretta = risposteMescolate[index] === domandaCorrente.corretta;
+    btn.classList.remove('corretta', 'sbagliata');
+    btn.disabled = false;
   });
 }
 
-/* Click su "Animali" */
+
+/* === EVENTI CLICK SUI BOTTONI CATEGORIA === */
 btnAnimali.addEventListener("click", () => {
   categoriaCorrente = 'animali';
   mostraQuiz(categoriaCorrente);
 });
-
-
-/* Click su una risposta */
-let categoriaCorrente = null;
-
-
-/* Click su "Cinema" */
 btnCinema.addEventListener("click", () => {
   categoriaCorrente = 'cinema';
   mostraQuiz(categoriaCorrente);
 });
-/* Click su "Sport" */
 btnSport.addEventListener("click", () => {
   categoriaCorrente = 'sport';
   mostraQuiz(categoriaCorrente);
 });
-/* Click su "Geografia" */
 btnGeograf.addEventListener("click", () => {
   categoriaCorrente = 'geografia';
   mostraQuiz(categoriaCorrente);
 });
-/* Click su "Storia" */
 btnStoria.addEventListener("click", () => {
   categoriaCorrente = 'storia';
   mostraQuiz(categoriaCorrente);
 });
 
+
+/* === EVENTI CLICK SULLE RISPOSTE === */
 bottoniRisposta.forEach(btn => {
   btn.addEventListener("click", () => {
+    if (!categoriaCorrente) return;
+
+    // Disabilita tutti i bottoni per evitare click multipli
+    bottoniRisposta.forEach(b => b.disabled = true);
+
+    // Controlla se la risposta è corretta
     const corretta = btn.dataset.corretta === "true";
     btn.classList.add(corretta ? "corretta" : "sbagliata");
 
-    // Dopo 800 ms, passa alla prossima domanda
+    // Dopo 0.8s mostra una nuova domanda
     setTimeout(() => {
-      // Rimuovi classi visive
       bottoniRisposta.forEach(b => b.classList.remove("corretta", "sbagliata"));
-      // Carica nuova domanda mantenendo la categoria corrente
       mostraQuiz(categoriaCorrente);
     }, 800);
   });
 });
-
